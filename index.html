@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <nav>
+            <form class="sort-form" id="sort-form" action="#" method="POST">
+                <label for="sort-form"><strong>Сортировать</strong></label>
+                <p class="sort-input"><input name="sort" type="radio" value="asc" id="sort-asc"> по возрастанию цены</p>
+                <p class="sort-input"><input name="sort" type="radio" value="desc" id="sort-desc"> по убыванию цены</p>
+                <p class="sort-input"><input name="sort" type="radio" value="duration" id="sort-duration"> по времени в пути</p>
+            </form> 
+            <ul>
+                <span><strong>Фильтровать</strong></span>
+                <li class="text-one-stop"><input data-f="one-stop"  type="checkbox" id="checkbox" onclick="toFilterTickets()"> с 1 пересадкой</li>
+                <li class="text-no-stops"><input data-f="no-stops" type="checkbox" id="checkbox-no-stops" onclick="toFilterTickets_noStops()"> без пересадок</li>
+            </ul>
+            <form action="#" method="POST" class="price-form" id="price-form">
+                <label for="price-form"><strong>Цена</strong></label>
+                <p>От<input class="range_from" type="text"></p>
+                <p>До<input type="text" class="range_to"></p>
+            </form>
+            <form class="airlines-form" id="airlines-form">
+                <label for="airlines-form"><strong>Авиакомпании</strong></label>
+                <p><input type="checkbox" data-f="lot" id="lot" onclick="toFilterTickets_airlines()"> LOT Polish Airlines от 21049 р.</p>
+                <p><input type="checkbox" data-f="aeroflot" id="aeroflot" onclick="toFilterTickets_airlines_aeroflot()"> Аэрофлот от 31733 р.</p>
+            </ul>
+        </nav>
+    <div class="block-cover">
+            <div class="box one-stop lot" data-price="21049" data-duration="14.45">
+                <div class="title">
+                    <img class="logo" src="./images/87008ca1bc5d8f35d343abffdd65483d.png" alt="logo">
+                    <span class="title-span">21049 p <p class="price">Стоимость для одного взрослого пассажира</p></span>
+                </div>
+                <div class="data">
+                    <p class="direction">Москва, ШЕРЕМЕТЬЕВО <span class="airport">(SVO)</span> <img class="arrow" src="./images/blue-arrow-74.png" alt="стрелочка"> ЛОНДОН, Лондон, Хитроу <span class="airport">(LHR)</span></p>
+                <div class="flight-details">
+                    <p>20:40 <span class="airport">18 авг. вт</span></p>
+                    <p><img class="watch" src="./images/img_211984.png" alt="часы"> 14 ч 45 мин</p>
+                    <p><span class="airport">19 авг. ср</span> 09:25</p>
+                </div>
+                    <p class="transfers"><span class="line">_____________________</span> 1 пересадка <span class="line2">_____________________</span></p>
+                    <p class="airlines border">Рейс выполняет: LOT Polish Airlines</p>
+                </div>
+            </div>
+            
+            <div class="box one-stop lot" data-price="21049" data-duration="23.35">
+                <div class="data">
+                    <p class="direction">ЛОНДОН, Лондон, Хитроу <span class="airport">(LHR) </span><img class="arrow" src="./images/blue-arrow-74.png" alt="стрелочка"> Москва, ШЕРЕМЕТЬЕВО <span class="airport">(SVO)</span> </p>
+                <div class="flight-details">
+                    <p>19:10 <span class="airport">19 авг. ср</span></p>
+                    <p><img class="watch" src="./images/img_211984.png" alt="часы"> 23 ч 35 мин</p>
+                    <p><span class="airport">20 авг. чт</span> 19:45</p>
+                </div>
+                    <p class="transfers"><span class="line">_____________________</span> 1 пересадка <span class="line2">_____________________</span></p>
+                    <p class="airlines">Рейс выполняет: LOT Polish Airlines</p>
+                </div>
+                <div class="choose"><button class="choose-button">ВЫБРАТЬ</button></div>
+            </div>
+        
+       
+           
+            <div class="box no-stops aeroflot" data-price="31733" data-duration="4.25">
+                <div class="title">
+                    <img class="logo logo_airflot" src="./images/523db4046da5d5c4f32ffd598bd2e3ac.jpeg" alt="logo">
+                    <span class="title-span">31733 p <p class="price">Стоимость для одного взрослого пассажира</p></span>
+                </div>
+                <div class="data">
+                    <p class="direction">Москва, ШЕРЕМЕТЬЕВО <span class="airport">(SVO)</span> <img class="arrow" src="./images/blue-arrow-74.png" alt="стрелочка"> ЛОНДОН, Лондон, Хитроу <span class="airport">(LHR)</span></p>
+                <div class="flight-details">
+                    <p>07:05 <span class="airport">18 авг. вт</span></p>
+                    <p><img class="watch" src="./images/img_211984.png" alt="часы"> 4 ч 25 мин</p>
+                    <p><span class="airport">18 авг. вт</span> 09:30</p>
+                </div>
+                    <p class="airlines border">Рейс выполняет: Аэрофлот - российские авиалинии</p>
+                </div>
+            </div>
+            <div class="box one-stop russia" data-price="31733" data-duration="15.25">
+                <div class="data">
+                    <p class="direction">ЛОНДОН, Лондон, Гатвик <span class="airport">(LGW)</span> <img class="arrow" src="./images/blue-arrow-74.png" alt="стрелочка"> Москва, ВНУКОВО <span class="airport">(VKO)</span></p>
+                <div class="flight-details">
+                    <p>17:10 <span class="airport">19 авг. ср</span></p>
+                    <p><img class="watch" src="./images/img_211984.png" alt="часы"> 15 ч 25 мин</p>
+                    <p><span class="airport">20 авг. чт</span> 10:35</p>
+                </div>
+                    <p class="transfers"><span class="line">_____________________</span> 1 пересадка <span class="line2">_____________________</span></p>
+                    <p class="airlines">Рейс выполняет: ГТК Россия</p>
+                </div>
+                <div class="choose"><button class="choose-button">ВЫБРАТЬ</button></div>
+            </div>
+        
+            
+        </div>
+
+        
+    </div>
+    <div class="show">
+        <button type="button" class="show-button">Показать еще</button>
+    </div>
+    
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>

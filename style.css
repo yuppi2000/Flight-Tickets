@@ -1,0 +1,201 @@
+html, body {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+}
+
+.arrow {
+  width: 1rem;
+  height: auto;
+  background-color: transparent;
+  margin-bottom: 0.2rem;
+}
+
+.logo {
+  width: 3.5rem;
+}
+
+.logo_airflot {
+  width: 5rem;
+}
+
+.title {
+  background-color: rgb(54, 154, 236);
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.border {
+  border-bottom: 2px solid rgb(54, 154, 236);
+}
+
+.airport {
+  color: rgb(54, 154, 236);
+}
+
+.title-span {
+  color: white;
+  text-align: right;
+  font-size: 18px;
+}
+
+.price {
+  font-size: 9px;
+  line-height: 0;
+  margin-top: 3px;
+}
+
+.data {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  padding: 15px;
+  font-size: 12px;
+}
+
+nav ul li {
+  margin-left: -35px;
+  padding: 5px 0;
+  list-style-type: none;
+}
+
+ul span {
+  margin-left: -40px;
+  display: block;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.box {
+    margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.choose {
+  width: 100%;
+  background-color: rgba(238, 132, 45, 0.938);
+  height: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.choose-button {
+  margin: 0 auto;
+  border: none;
+  color: white;
+  font-size: 16px;
+  background-color: transparent;
+  width: 100%;
+  cursor: pointer;
+}
+
+.show {
+  margin-left: 400px;
+  width: 60%;
+  text-align: center;
+}
+
+.show-button {
+  width: 170px;
+  cursor: pointer;
+}
+
+.sort-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sort-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.sort-form input {
+  margin-right: 7px;
+}
+
+
+.price-form label {
+  display: block;
+}
+
+.price-form input {
+  margin-left: 10px;
+}
+
+.block-cover {
+  margin-left: 350px;
+}
+
+.watch {
+  width: 15px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.flight-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.direction {
+  border-bottom: 1px solid rgb(160, 155, 155);
+  padding-bottom: 10px;
+}
+
+.airlines {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.transfers {
+  position: relative;
+  font-size: 12px;
+  color: rgba(238, 132, 45, 0.938);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.line {
+  position: absolute;
+  top: -5px;
+  left: 30px;
+  color: rgb(160, 155, 155);
+}
+
+.line2 {
+  position: absolute;
+  top: -5px;
+  right: 30px;
+  color: rgb(160, 155, 155);
+}
